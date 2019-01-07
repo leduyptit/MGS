@@ -1,40 +1,40 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
-	<acl>
-		<resources>
-			<resource id="Magento_Backend::admin">
-				<resource id="Magento_Backend::stores">
-					<resource id="Magento_Backend::stores_settings">
-						<resource id="Magento_Config::config">
-							<resource id="MGS_Marketplace::config_mgs_marketplace" title="marketplace"/>
-						</resource>
-					</resource>
-				</resource>
-				<resource id="MGS_Marketplace::seller" sortOrder="10" title="seller">
-					<resource id="MGS_Marketplace::seller_save" sortOrder="10" title="Save seller"/>
-					<resource id="MGS_Marketplace::seller_delete" sortOrder="20" title="Delete seller"/>
-					<resource id="MGS_Marketplace::seller_update" sortOrder="30" title="Update seller"/>
-					<resource id="MGS_Marketplace::seller_view" sortOrder="40" title="View seller"/>
-				</resource>
-				<resource id="MGS_Marketplace::commission" sortOrder="10" title="commission">
-					<resource id="MGS_Marketplace::commission_save" sortOrder="10" title="Save commission"/>
-					<resource id="MGS_Marketplace::commission_delete" sortOrder="20" title="Delete commission"/>
-					<resource id="MGS_Marketplace::commission_update" sortOrder="30" title="Update commission"/>
-					<resource id="MGS_Marketplace::commission_view" sortOrder="40" title="View commission"/>
-				</resource>
-				<resource id="MGS_Marketplace::transaction" sortOrder="10" title="transaction">
-					<resource id="MGS_Marketplace::transaction_save" sortOrder="10" title="Save transaction"/>
-					<resource id="MGS_Marketplace::transaction_delete" sortOrder="20" title="Delete transaction"/>
-					<resource id="MGS_Marketplace::transaction_update" sortOrder="30" title="Update transaction"/>
-					<resource id="MGS_Marketplace::transaction_view" sortOrder="40" title="View transaction"/>
-				</resource>
-				<resource id="MGS_Marketplace::review" sortOrder="10" title="review">
-					<resource id="MGS_Marketplace::review_save" sortOrder="10" title="Save review"/>
-					<resource id="MGS_Marketplace::review_delete" sortOrder="20" title="Delete review"/>
-					<resource id="MGS_Marketplace::review_update" sortOrder="30" title="Update review"/>
-					<resource id="MGS_Marketplace::review_view" sortOrder="40" title="View review"/>
-				</resource>
-			</resource>
-		</resources>
-	</acl>
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="MGS_Marketplace::config_mgs_marketplace" title="marketplace"/>
+                        </resource>
+                    </resource>
+                </resource>
+                <resource id="MGS_Marketplace::seller" sortOrder="10" title="seller">
+                    <resource id="MGS_Marketplace::seller_save" sortOrder="10" title="Save seller"/>
+                    <resource id="MGS_Marketplace::seller_delete" sortOrder="20" title="Delete seller"/>
+                    <resource id="MGS_Marketplace::seller_update" sortOrder="30" title="Update seller"/>
+                    <resource id="MGS_Marketplace::seller_view" sortOrder="40" title="View seller"/>
+                </resource>
+                <resource id="MGS_Marketplace::commission" sortOrder="10" title="commission">
+                    <resource id="MGS_Marketplace::commission_save" sortOrder="10" title="Save commission"/>
+                    <resource id="MGS_Marketplace::commission_delete" sortOrder="20" title="Delete commission"/>
+                    <resource id="MGS_Marketplace::commission_update" sortOrder="30" title="Update commission"/>
+                    <resource id="MGS_Marketplace::commission_view" sortOrder="40" title="View commission"/>
+                </resource>
+                <resource id="MGS_Marketplace::transaction" sortOrder="10" title="transaction">
+                    <resource id="MGS_Marketplace::transaction_save" sortOrder="10" title="Save transaction"/>
+                    <resource id="MGS_Marketplace::transaction_delete" sortOrder="20" title="Delete transaction"/>
+                    <resource id="MGS_Marketplace::transaction_update" sortOrder="30" title="Update transaction"/>
+                    <resource id="MGS_Marketplace::transaction_view" sortOrder="40" title="View transaction"/>
+                </resource>
+                <resource id="MGS_Marketplace::review" sortOrder="10" title="review">
+                    <resource id="MGS_Marketplace::review_save" sortOrder="10" title="Save review"/>
+                    <resource id="MGS_Marketplace::review_delete" sortOrder="20" title="Delete review"/>
+                    <resource id="MGS_Marketplace::review_update" sortOrder="30" title="Update review"/>
+                    <resource id="MGS_Marketplace::review_view" sortOrder="40" title="View review"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
 </config>

@@ -1,14 +1,10 @@
 <?php
-
-
 namespace MGS\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface TransactionRepositoryInterface
 {
-
-
     /**
      * Save transaction
      * @param \MGS\Marketplace\Api\Data\TransactionInterface $transaction

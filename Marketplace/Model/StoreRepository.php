@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model;
 
 use Magento\Framework\Api\SortOrder;
@@ -100,45 +98,6 @@ class StoreRepository implements StoreRepositoryInterface
         return $store;
     }
 
-    public function getByVendorId($vendorId)
-    {
-        $collection = $this->storeCollectionFactory->create();
-        $collection->addFieldToFilter('main_table.vendor_id', array('eq' => $vendorId));
-        $sellerTable = $collection->getResource()->getTable('mgs_marketplace_seller');
-        $customerTable = $collection->getResource()->getTable('customer_entity');
-        $collection->getSelect()
-            ->join(
-                array('seller' => $sellerTable), 
-                'main_table.vendor_id = seller.seller_id',
-                []
-            )->join(
-                array('customer' => $customerTable), 
-                'seller.customer_id = customer.entity_id',
-                ['tax_number' => 'customer.taxvat']
-            )->joinLeft(
-                array('customer_address' => 'customer_address_entity'), 
-                'customer_address.parent_id = customer.entity_id',
-                ['telephone' => 'customer_address.telephone']
-            );
-        //echo $collection->getSelect();die;
-        if(count($collection))
-        {
-            return $collection->getFirstItem();
-        }
-        return null;
-    }
-
-    public function getByProfileTargetUrl($url)
-    {
-        $collection = $this->storeCollectionFactory->create();
-        $collection->addFieldToFilter('profile_page_target_url', array('eq' => $url));
-        if(count($collection))
-        {
-            return $collection->getFirstItem();
-        }
-        return null;
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -204,5 +163,18 @@ class StoreRepository implements StoreRepositoryInterface
     public function deleteById($storeId)
     {
         return $this->delete($this->getById($storeId));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getByProfileTargetUrl($url)
+    {
+        $store = $this->storeFactory->create();
+        $store->load($url, 'profile_page_target_url');
+        if (!$store->getId()) {
+            return null;
+        }
+        return $store;
     }
 }

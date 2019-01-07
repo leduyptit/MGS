@@ -1,23 +1,9 @@
 <?php
-
-
 namespace MGS\Marketplace\Controller\Product;
 
-class Index extends \MGS\Marketplace\Bcontroller\Mui
+use MGS\Marketplace\Controller\AbstractController as BaseController;
+
+class Index extends BaseController
 {
 
-    /**
-     * Execute view action
-     *
-     * @return \Magento\Framework\Controller\ResultInterface
-     */
-    public function execute()
-    {
-        /**
-         *
-         * @var \Magento\Framework\Controller\ResultInterface
-         *
-         */
-        return $this->loadPageLayout();
-    }
 }

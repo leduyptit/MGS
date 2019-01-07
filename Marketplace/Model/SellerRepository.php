@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model;
 
 use Magento\Framework\Api\SortOrder;
@@ -100,25 +98,6 @@ class SellerRepository implements SellerRepositoryInterface
         return $seller;
     }
 
-    public function getByCustomerId($customerId)
-    {
-        $seller = $this->sellerFactory->create();
-        $collection = $seller->getCollection();
-        $collection->addFieldToFilter('main_table.customer_id', array('eq' => $customerId));
-        $customerTable = $collection->getResource()->getTable('customer_entity');
-        $collection->getSelect()
-            ->join(
-                array('customer' => $customerTable), 
-                'main_table.customer_id= customer.entity_id',
-                ['tax_number' => 'customer.taxvat']
-            );
-        if(count($collection))
-        {
-            return $collection->getFirstItem();
-        }
-        return false;
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -184,5 +163,18 @@ class SellerRepository implements SellerRepositoryInterface
     public function deleteById($sellerId)
     {
         return $this->delete($this->getById($sellerId));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getByCustomerId($customerId)
+    {
+        $seller = $this->sellerFactory->create();
+        $seller->load($customerId, 'customer_id');
+        if (!$seller->getId()) {
+            return null;
+        }
+        return $seller;
     }
 }

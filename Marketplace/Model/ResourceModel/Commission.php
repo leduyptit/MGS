@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model\ResourceModel;
 
 class Commission extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb

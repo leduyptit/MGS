@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Block\Account;
 
 class SellerSidebar extends \Magento\Framework\View\Element\Template

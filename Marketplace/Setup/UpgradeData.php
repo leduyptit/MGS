@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Setup;
 
 use Magento\Framework\Setup\UpgradeDataInterface;

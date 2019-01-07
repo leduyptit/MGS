@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Controller\Adminhtml\Seller;
 
 class Index extends \Magento\Backend\App\Action
@@ -30,7 +28,7 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-            $resultPage->getConfig()->getTitle()->prepend(__("seller"));
-            return $resultPage;
+        $resultPage->getConfig()->getTitle()->prepend(__("Marketplace Sellers"));
+        return $resultPage;
     }
 }

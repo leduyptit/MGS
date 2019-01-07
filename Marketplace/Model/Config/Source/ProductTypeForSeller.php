@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model\Config\Source;
 
 class ProductTypeForSeller implements \Magento\Framework\Option\ArrayInterface

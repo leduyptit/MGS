@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model\Config\Source;
 
 class AllowedCategoryForSeller implements \Magento\Framework\Option\ArrayInterface

@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Api\Data;
 
 interface ReviewSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface

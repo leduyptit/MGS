@@ -1,14 +1,10 @@
 <?php
-
-
 namespace MGS\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface SellerRepositoryInterface
 {
-
-
     /**
      * Save seller
      * @param \MGS\Marketplace\Api\Data\SellerInterface $seller
@@ -55,4 +51,11 @@ interface SellerRepositoryInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function deleteById($sellerId);
+
+    /**
+     * Get seller by Customer ID
+     * @param string $customerID
+     * @return \MGS\Marketplace\Api\Data\SellerInterface | null
+     */
+    public function getByCustomerId($customerId);
 }

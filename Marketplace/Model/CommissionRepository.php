@@ -1,6 +1,4 @@
 <?php
-
-
 namespace MGS\Marketplace\Model;
 
 use Magento\Framework\Api\SortOrder;

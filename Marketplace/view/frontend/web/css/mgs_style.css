@@ -1,0 +1,20 @@
+.mgs-hidden {
+    display: none;
+}
+.mgs-marketplace-btn.right {
+    float: right;
+    margin-left: 10px;
+}
+.mgs-marketplace-form-control-alert {
+    font-size: 13px;
+}
+.mgs-alert-success {
+    color: #006400;
+}
+.mgs-alert-error {
+    color: #e02b27;
+}
+.form-control-loader img {
+    width: 20px;
+    height: 20px;
+}
