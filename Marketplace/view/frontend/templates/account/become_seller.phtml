@@ -1,0 +1,34 @@
+<?php
+/*
+ * $block = MGS\Marketplace\Block\Account\BecomeSeller
+ *
+ */
+?>
+<form action="<?php echo $block->getPostAction(); ?>" enctype="multipart/form-data" method="post" id="form-become-seller" data-role="form-become-seller" novalidate="novalidate"> 
+	<?php echo $block->getBlockHtml('formkey')?>
+	<div class="mgs-become-seller-form-content">
+		<fieldset class="fieldset info mgs-marketplace-fieldset">
+			<legend class="legend">
+				<span>Seller Request Panel</span> 
+				<button type="reset" class="button mgs-marketplace-btn">
+					<span>
+						<span>Reset</span>
+					</span>
+				</button> 
+				<button type="submit" title="Save" class="button mgs-marketplace-btn">
+					<span> 
+						<span>Save</span>
+					</span>
+				</button>
+			</legend>
+			<div class="field required">
+				<label class="label">Shop URL</label> 
+				<span class="mgs-marketplace-field-description">URL for your shop</span>
+				<div class="control shop" id="mgs-marketplace-become-seller-box-wrapper">
+					<input type="text" class="required-entry mgs-marketplace-full-width" name="profileurl" id="profileurl" data-role="shop-url" placeholder="Please enter shop URL" aria-required="true">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</form>
+<div class="mgs-marketplace-load no-display"></div>

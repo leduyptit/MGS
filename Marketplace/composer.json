@@ -1,0 +1,22 @@
+{
+    "name": "mgs/module-marketplace",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@magesolution.com",
+            "name": "Mage Solution"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MGS\\Marketplace\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

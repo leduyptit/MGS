@@ -1,0 +1,507 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="mage_solution" sortOrder="10" translate="label">
+			<label>Mage Solution</label>
+		</tab>
+		<section id="marketplace" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Marketplace</label>
+			<tab>mage_solution</tab>
+			<resource>MGS_Marketplace::config_mgs_marketplace</resource>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>General</label>
+				<field id="admin_email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Admin Email</label>
+					<comment/>
+				</field>
+				<field id="global_commission_rate" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+					<label>Global Commission Rate</label>
+					<comment>Should be integer value like 20</comment>
+				</field>
+				<field id="allow_manage_order" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="select">
+					<label>Allow seller to manage orders</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="move_product_tax_to_seller" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="select">
+					<label>Move product tax to seller account</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_approval_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="select">
+					<label>Seller approval required</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="captcha_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="select">
+					<label>Set captcha enabled</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="seller_dashboard" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+				<label>Seller Dashboard Layout Settings</label>
+				<field id="allow_separate_dashboard" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Allow seller separate dashboard</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_dashboard_logo" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Seller dashboard logo image</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png. Recommended image size with same width and height ratio.</comment>
+				</field>
+			</group>
+			<group id="seller_product" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+				<label>Seller Product's Settings</label>
+				<field id="attribute_set" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="multiselect">
+					<label>Attribute Set ID</label>
+					<comment/>
+					<source_model>MGS\Marketplace\Model\Config\Source\AttributeSet</source_model>
+				</field>
+				<field id="product_approval_require" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="select">
+					<label>Product approval require</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_update_approval_require" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+					<label>Product update approval required</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_category_tree" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="select">
+					<label>Allow category tree view like admin category tree view</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allowed_category_for_seller" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="multiselect">
+					<label>Allowed categories for seller to add product</label>
+					<comment/>
+					<source_model>MGS\Marketplace\Model\Config\Source\AllowedCategoryForSeller</source_model>
+				</field>
+				<field id="product_type_for_seller" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="multiselect">
+					<label>Product type for seller</label>
+					<comment/>
+					<source_model>MGS\Marketplace\Model\Config\Source\ProductTypeForSeller</source_model>
+				</field>
+				<field id="allow_product_sku_type" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="select">
+					<label>Allow seller to add products with sku type</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_related_product" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label" type="select">
+					<label>Allow seller to add related product</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_upsell_product" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>allow_upsell_product</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_crosssell_product" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="90" translate="label" type="select">
+					<label>Allow seller to add Cross-sell product</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_limit_purchase" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="100" translate="label" type="select">
+					<label>Allow seller to add limit on Product Purchase for customer</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="allow_purchase_qty" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="110" translate="label" type="select">
+					<label>Allowed Product Qty on Product Purchase for Customer</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="seller_order" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Seller Order's Settings</label>
+				<field id="order_approval_requre" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Order approval required</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="inventory_settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Inventory Settings</label>
+				<field id="enable_low_notification" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable low notification</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="low_stock_quantity" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Low stock quantity</label>
+					<comment/>
+				</field>
+			</group>
+			<group id="seller_profile_page" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Inventory Settings</label>
+				<field id="display_seller_profile" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Display seller profile</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="enable_color_picker" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable color picker</label>
+					<comment>Allow sellers to change their profile page background color</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_policies_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller policies enabled at frontend</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="rewrite_seller_shop_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Rewrite seller shop URL</label>
+					<comment>Allow sellers to manage their shop URL</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="auto_create_seller_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Allow to automatic create seller public url on seller registration</label>
+					<comment>Automatic create seller public url as profile url - yourwebsite.com/seller-shop-url, collection url - yourwebsite.com/seller-shop-url/collection, location url - yourwebsite.com/seller-shop-url/location, feedback url - yourwebsite.com/seller-shop-url/feedback on seller registration</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="marketplace_seller_review" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Marketplace Seller Review Settings</label>
+				<field id="only_allow_authorized" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Make a review on only order purchase</label>
+					<comment>Allow only authorize buyers to review for seller</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+			<group id="landing_page_layout" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Landing Page Layout Settings</label>
+				<field id="display_seller_registration_on_customer_registration_page" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Display seller registration block on customer registration page</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="marketplace_landing_page_layout" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Marketplace landing page layout</label>
+					<comment>e.g Select Layout Which will be seen at frontend</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="landing_page_header_title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page header title</label>
+					<comment>e.g Turn Your Passion Into a Business</comment>
+				</field>
+				<field id="display_banner" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Display banner</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="banner_image" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Banner image</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="banner_content" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Banner content</label>
+					<comment>This content will be display over the banner image in the marketplace landing page url - www.yourwebsite.com/marketplace</comment>
+				</field>
+				<field id="landing_page_label_1" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page label 1</label>
+					<comment>e.g Turn Your Passion Into a Business (will be display above all feature's icons)</comment>
+				</field>
+				<field id="landing_page_label_2" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page label 2</label>
+					<comment>e.g Sellers with Taste (will be display above top 4 seller's block)</comment>
+				</field>
+				<field id="landing_page_label_3" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page label 3</label>
+					<comment>e.g More than 500 shop owners have joined us last month (will be display above "View All Sellers" button)</comment>
+				</field>
+				<field id="landing_page_label_4" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page label 4</label>
+					<comment>e.g Why to sell with us (will be display above marketplace content)</comment>
+				</field>
+				<field id="landing_page_button_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace landing page button label</label>
+					<comment>e.g Open a Marketplace Shop - this will also display over banner</comment>
+				</field>
+				<field id="display_icons" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Display icons</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="feature_1_icon" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 1 icon</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+				</field>
+				<field id="feature_1_icon_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 1 icon label</label>
+					<comment>e.g Register Yourself</comment>
+				</field>
+				<field id="feature_2_icon" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 2 icon</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+				</field>
+				<field id="feature_2_icon_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 2 icon label</label>
+					<comment>e.g Add Products</comment>
+				</field>
+				<field id="feature_3_icon" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 3 icon</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+				</field>
+				<field id="feature_3_icon_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 3 icon label</label>
+					<comment>e.g Start Selling</comment>
+				</field>
+				<field id="feature_4_icon" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 4 icon</label>
+					<comment>Allowed file types: jpg, jpeg, gif, png</comment>
+				</field>
+				<field id="feature_4_icon_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Feature 4 icon label</label>
+					<comment>e.g Generate Revenues</comment>
+				</field>
+				<field id="about_marketplace" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>About marketplace</label>
+					<comment></comment>
+				</field>
+				<field id="seller_list_page_top_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace seller list page top label</label>
+					<comment></comment>
+				</field>
+				<field id="seller_list_page_bottom_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Marketplace seller list page bottom label</label>
+					<comment></comment>
+				</field>
+			</group>
+			<group id="marketplace_product_page_fields_hints" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Marketplace Product Page Fields Hints</label>
+				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable product hints</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_category" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product category</label>
+					<comment></comment>
+				</field>
+				<field id="product_name" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product name</label>
+					<comment></comment>
+				</field>
+				<field id="product_description" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product description</label>
+					<comment></comment>
+				</field>
+				<field id="product_short_description" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product short description</label>
+					<comment></comment>
+				</field>
+				<field id="product_sku" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product sku</label>
+					<comment></comment>
+				</field>
+				<field id="product_price" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product price</label>
+					<comment></comment>
+				</field>
+				<field id="product_special_price" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product special price</label>
+					<comment></comment>
+				</field>
+				<field id="product_special_start_date" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product special start date</label>
+					<comment></comment>
+				</field>
+				<field id="product_special_end_date" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product special end date</label>
+					<comment></comment>
+				</field>
+				<field id="product_quantity" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product quantity</label>
+					<comment></comment>
+				</field>
+				<field id="product_stock_availability" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product stock availability</label>
+					<comment></comment>
+				</field>
+				<field id="product_tax_types" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product tax types</label>
+					<comment></comment>
+				</field>
+				<field id="product_weight" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product weight</label>
+					<comment></comment>
+				</field>
+				<field id="product_image" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product image</label>
+					<comment></comment>
+				</field>
+				<field id="product_enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Product enable</label>
+					<comment></comment>
+				</field>
+			</group>
+			<group id="marketplace_profile_page_fields_hints" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Marketplace Profile Page Fields Hints</label>
+				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable profile hints</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="do_you_want_to_become" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Do you want to become seller/vendor?</label>
+					<comment></comment>
+				</field>
+				<field id="shop_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Shop URL</label>
+					<comment></comment>
+				</field>
+				<field id="profile_twitter_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile twitter id</label>
+					<comment></comment>
+				</field>
+				<field id="profile_facebook_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile facebook id</label>
+					<comment></comment>
+				</field>
+				<field id="profile_contact_number" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile contact number</label>
+					<comment></comment>
+				</field>
+				<field id="profile_background_color" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile background color</label>
+					<comment></comment>
+				</field>
+				<field id="profile_shop_name" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile shop name</label>
+					<comment></comment>
+				</field>
+				<field id="profile_shop_banner_image" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile shop banner image</label>
+					<comment></comment>
+				</field>
+				<field id="profile_company_logo" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile company logo</label>
+					<comment></comment>
+				</field>
+				<field id="profile_company_locality" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile company locality</label>
+					<comment></comment>
+				</field>
+				<field id="profile_company_description" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile company description</label>
+					<comment></comment>
+				</field>
+				<field id="profile_return_policy" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile return policy</label>
+					<comment></comment>
+				</field>
+				<field id="profile_shipping_policy" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile shipping policy</label>
+					<comment></comment>
+				</field>
+				<field id="profile_country" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile country</label>
+					<comment></comment>
+				</field>
+				<field id="profile_meta_keywords" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile meta keywords</label>
+					<comment></comment>
+				</field>
+				<field id="profile_meta_description" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile meta description</label>
+					<comment></comment>
+				</field>
+				<field id="profile_payment_information" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Profile payment information</label>
+					<comment></comment>
+				</field>
+			</group>
+			<group id="transaction_email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
+				<label>Marketplace Transaction Emails</label>
+				<field id="seller_approval_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller approval template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_request_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller request template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_unsubscribe_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller unsubscribe template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_deny_by_admin_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller deny by admin template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_deny_by_admin_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Product deny by admin template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_approval_request_to_admin_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Product approval request to admin template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_edit_approval_request_to_admin_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Product edit approval request to admin template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="ask_question_to_seller_regarding_product_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Ask question to seller regarding product template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="ask_question_to_seller_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Ask question to seller template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="ask_question_to_admin_by_seller_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Ask question to admin by seller template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_approval_mail_to_seller_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Product approval mail to seller template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_disapproval_mail_to_seller_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Product disapproval mail to seller template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_order_placed_notification_mail_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller order placed notification mail template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_order_invoiced_notification_mail_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller order invoiced notification mail template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_transaction_mail_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller transaction mail template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_low_stock_notification_mail_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Seller low stock notification mail template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="seller_withdrawal_request_mail_template" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Withdrawal request mail template</label>
+					<comment></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

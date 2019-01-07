@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add id="MGS_Marketplace::marketplace" title="MGS Marketplace" module="MGS_Marketplace" sortOrder="50" resource="Magento_Backend::content" />
+		<add action="mgs_marketplace/seller/index" id="MGS_Marketplace::mgs_marketplace_seller" module="MGS_Marketplace" parent="MGS_Marketplace::marketplace" resource="Magento_Backend::content" sortOrder="10" title="Manage Seller"/>
+		<add action="mgs_marketplace/commission/index" id="MGS_Marketplace::mgs_marketplace_commission" module="MGS_Marketplace" parent="MGS_Marketplace::marketplace" resource="Magento_Backend::content" sortOrder="20" title="Manage Commission"/>
+		<add action="mgs_marketplace/transaction/index" id="MGS_Marketplace::mgs_marketplace_transaction" module="MGS_Marketplace" parent="MGS_Marketplace::marketplace" resource="Magento_Backend::content" sortOrder="30" title="Manage Transaction"/>
+		<add action="mgs_marketplace/review/index" id="MGS_Marketplace::mgs_marketplace_review" module="MGS_Marketplace" parent="MGS_Marketplace::marketplace" resource="Magento_Backend::content" sortOrder="40" title="Manage Review"/>
+	</menu>
+</config>
