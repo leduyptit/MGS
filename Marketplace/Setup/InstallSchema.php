@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
@@ -134,7 +136,7 @@ class InstallSchema implements InstallSchemaInterface
 
         
         $table_mgs_marketplace_store->addColumn(
-            'google_plus',
+            'googleplus',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             null,
             [],

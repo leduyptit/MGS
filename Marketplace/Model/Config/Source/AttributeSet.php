@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Model\Config\Source;
 
 class AttributeSet implements \Magento\Framework\Option\ArrayInterface

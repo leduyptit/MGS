@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Controller\Customer;
 
 class BecomeSeller extends \Magento\Framework\App\Action\Action
@@ -30,17 +32,14 @@ class BecomeSeller extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        $sellerCheck = $this->helper->checkForSeller();
-        if ($sellerCheck == -1) {
-            //not logged in
-            return $this->_redirect('customer/account/login');
-        } elseif ($sellerCheck == 1) {
-            //is a seller already
-            return $this->_redirect('mgs_marketplace/dashboard');
-        } elseif ($sellerCheck == 2) {
-            //blocked
-            $this->messageManager->addError(__('Your account has been blocked from Marketplace. Please contact the administrator!'));
-            return $this->_redirect('mgs_marketplace');
+        $stt = $this->helper->checkLoggedInAndNotSeller();
+        if($stt == 0)
+        {
+            $this->_redirect('customer/account/login');
+        }
+        else if($stt == 2)
+        {
+            $this->_redirect('mgs_marketplace/dashboard');
         }
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->set('Become Seller');

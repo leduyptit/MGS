@@ -5,8 +5,7 @@ use Magento\Framework\App\Helper\Context;
 
 class GetConfig extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    protected $configPrefix = 'mage_solution/marketplace/';
-    
+    const PREFIX = 'mage_solution/marketplace/';
 	protected $scopeConfig;
 
     public function __construct(
@@ -19,10 +18,11 @@ class GetConfig extends \Magento\Framework\App\Helper\AbstractHelper
     }
     public function getConfig($path)
     {
-        if (is_null($path)) {
+        if(is_null($path))
+        {
             return null;
         }
-        return $this->scopeConfig->getValue($this->configPrefix.$path, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        return $this->scopeConfig->getValue(PREFIX.$path, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
     public function getAdminEmail()

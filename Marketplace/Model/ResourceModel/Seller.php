@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Model\ResourceModel;
 
 class Seller extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb

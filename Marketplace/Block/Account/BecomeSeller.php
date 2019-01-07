@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Block\Account;
 
 class BecomeSeller extends \Magento\Framework\View\Element\Template

@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Setup;
 
 use Magento\Eav\Setup\EavSetupFactory;

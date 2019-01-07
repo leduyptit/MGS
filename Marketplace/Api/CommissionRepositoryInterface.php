@@ -1,10 +1,14 @@
 <?php
+
+
 namespace MGS\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface CommissionRepositoryInterface
 {
+
+
     /**
      * Save commission
      * @param \MGS\Marketplace\Api\Data\CommissionInterface $commission

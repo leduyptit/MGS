@@ -19,24 +19,30 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $this->sellerRepo = $sellerRepo;
         parent::__construct($context);
     }
-
-    /**
-     * Check current user is seller
-     * @return int
-     */
 	public function checkForSeller()
     {
         if ($this->customerSession->isLoggedIn()) {
             $customerId = $this->customerSession->getCustomer()->getId();
-            if ($seller = $this->sellerRepo->getByCustomerId($customerId)) {
-                if ($seller->getStatus() == 1) {
-                    return 1; //valid seller
-                } elseif ($seller->getStatus() == -1) {
-                    return 2; //is a seller but locked
+            if($seller = $this->sellerRepo->getByCustomerId($customerId))
+            {
+                if($seller->getStatus() == 1) {
+                    return true;
                 }
             }
-            return 0; //is not a seller
         }
-        return -1; //user is not logged in
+        return false;
+    }
+
+    public function checkLoggedInAndNotSeller()
+    {
+    	if ($this->customerSession->isLoggedIn()) {
+            $customerId = $this->customerSession->getCustomer()->getId();
+            if(!$this->sellerRepo->getByCustomerId($customerId))
+            {
+                return 1; //true
+            }
+            return 2; //logged in and is seller
+        }
+        return 0; //not logged in
     }
 }

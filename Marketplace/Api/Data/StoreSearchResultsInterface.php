@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Api\Data;
 
 interface StoreSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface

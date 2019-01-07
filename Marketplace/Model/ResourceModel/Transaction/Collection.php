@@ -1,4 +1,6 @@
 <?php
+
+
 namespace MGS\Marketplace\Model\ResourceModel\Transaction;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection

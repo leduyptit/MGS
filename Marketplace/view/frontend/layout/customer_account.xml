@@ -8,8 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" label="Marketplace Become Seller" design_abstraction="custom">
     <body>
         <referenceContainer name="sidebar.main">
-            <block class="MGS\Marketplace\Block\Account\SellerSidebar" name="sidebar.main.account.become.seller" template="MGS_Marketplace::account/become_seller_sidebar.phtml" before="-" cacheable="false">
-                <arguments>
+        	<block class="MGS\Marketplace\Block\Account\SellerSidebar" name="sidebar.main.account.become.seller" template="MGS_Marketplace::account/become_seller_sidebar.phtml" before="-" cacheable="false">
+        		<arguments>
                     <argument name="block_css" xsi:type="string">block-collapsible-nav</argument>
                 </arguments>
                 <block class="Magento\Customer\Block\Account\Navigation" name="customer_account_navigation_become_seller" before="-">

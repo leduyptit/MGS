@@ -1,10 +1,14 @@
 <?php
+
+
 namespace MGS\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface ReviewRepositoryInterface
 {
+
+
     /**
      * Save review
      * @param \MGS\Marketplace\Api\Data\ReviewInterface $review

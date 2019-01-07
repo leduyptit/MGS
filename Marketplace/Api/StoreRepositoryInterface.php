@@ -1,10 +1,14 @@
 <?php
+
+
 namespace MGS\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface StoreRepositoryInterface
 {
+
+
     /**
      * Save store
      * @param \MGS\Marketplace\Api\Data\StoreInterface $store
@@ -51,11 +55,4 @@ interface StoreRepositoryInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function deleteById($storeId);
-
-    /**
-     * Get/find store by it's url
-     * @param string $url
-     * @return \MGS\Marketplace\Api\Data\StoreInterface $store | null
-     */
-    public function getByProfileTargetUrl($url);
 }
